@@ -31,17 +31,16 @@ let getData = html => {
       title : $(elem).text(),
       link : $(elem).find('a.storylink').attr('href')
     });
-  });
-  return data;
+  })
+  
 
 
     .then(() => ({
-      statusCode: 200,
-      body: `Hello, ${name}! Your greeting has been sent to Slack 👋`
+      return data;
     }))
     .catch(error => ({
       statusCode: 422,
       body: `Oops! Something went wrong. ${error}`
     }));
 
-}
+};
